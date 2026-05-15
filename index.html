@@ -1,74 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Kannada Flashcards</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div id="app">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kannada Flashcards</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- HOME SCREEN -->
+      <section id="home-screen" class="screen active">
+        <h1>Kannada Flashcards</h1>
+        <button class="primary" id="btn-alphabetical">Alphabetical</button>
+        <button class="primary" id="btn-categories">By Category</button>
+        <button class="primary" id="btn-random">Random</button>
+      </section>
 
-    <!-- HOME SCREEN -->
-    <section id="home-screen" class="screen active">
-      <h1>Kannada Flashcards</h1>
-      <button class="primary" id="btn-alphabetical">Alphabetical</button>
-      <button class="primary" id="btn-categories">By Category</button>
-      <button class="primary" id="btn-random">Random</button>
-    </section>
+      <!-- CATEGORY SELECTION SCREEN -->
+      <section id="category-screen" class="screen">
+        <header class="top-bar">
+          <button class="back-btn" data-back="home-screen">← Home</button>
+          <h2>Categories</h2>
+        </header>
+        <div class="category-list" id="category-list">
+          <!-- Filled by JS -->
+        </div>
+      </section>
 
-    <!-- CATEGORY SELECTION SCREEN -->
-    <section id="category-screen" class="screen">
-      <header class="top-bar">
-        <button class="back-btn" data-back="home-screen">← Home</button>
-        <h2>Categories</h2>
-      </header>
-      <div class="category-list" id="category-list">
-        <!-- Filled by JS -->
-      </div>
-    </section>
+      <!-- FLASHCARD SCREEN -->
+      <section id="flashcard-screen" class="screen">
+        <header class="top-bar">
+          <button class="back-btn" id="flashcard-back">← Back</button>
+          <h2 id="flashcard-title">Flashcards</h2>
+          <span id="progress-text"></span>
+        </header>
 
-    <!-- FLASHCARD SCREEN -->
-    <section id="flashcard-screen" class="screen">
-      <header class="top-bar">
-        <button class="back-btn" id="flashcard-back">← Back</button>
-        <h2 id="flashcard-title">Flashcards</h2>
-        <span id="progress-text"></span>
-      </header>
-
-      <div class="flashcard-container">
-        <div class="flashcard" id="flashcard">
-          <div class="flashcard-inner">
-            <div class="flashcard-face flashcard-front" id="card-front"></div>
-            <div class="flashcard-face flashcard-back" id="card-back"></div>
+        <div class="flashcard-container">
+          <div class="flashcard" id="flashcard">
+            <div class="flashcard-inner">
+              <div class="flashcard-face flashcard-front" id="card-front"></div>
+              <div class="flashcard-face flashcard-back" id="card-back"></div>
+            </div>
           </div>
         </div>
-      </div>
-      <p class="hint">Tap card to flip, tap again to go to next.</p>
-    </section>
+        <p class="hint">Tap card to flip, tap again to go to next.</p>
+      </section>
 
-    <!-- ALPHABETICAL SCREEN -->
-    <section id="alphabetical-screen" class="screen">
-      <header class="top-bar sticky">
-        <button class="back-btn" data-back="home-screen">← Home</button>
-        <h2>Alphabetical</h2>
-        <button id="toggle-language" class="secondary">
-          Show: Kannada
-        </button>
-      </header>
+      <!-- ALPHABETICAL SCREEN -->
+      <section id="alphabetical-screen" class="screen">
+        <header class="top-bar sticky">
+          <button class="back-btn" data-back="home-screen">← Home</button>
+          <h2>Alphabetical</h2>
+          <button id="toggle-language" class="secondary">Show: Kannada</button>
+        </header>
 
-      <div class="alphabet-rail" id="alphabet-rail">
-        <!-- A–Z buttons filled by JS -->
-      </div>
+        <div class="alphabet-rail" id="alphabet-rail">
+          <!-- A–Z buttons filled by JS -->
+        </div>
 
-      <div class="term-list" id="term-list">
-        <!-- Terms grouped by letter, filled by JS -->
-      </div>
-    </section>
+        <div class="term-list" id="term-list">
+          <!-- Terms grouped by letter, filled by JS -->
+        </div>
+      </section>
+    </div>
 
-  </div>
-
-<script src="terms.js"></script>
-<script src="script.js"></script>
-</body>
+    <script src="terms.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>

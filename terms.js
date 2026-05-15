@@ -30,7 +30,7 @@ const TERMS = [
   },
   {
     en: "The weather is good today",
-    kn: "Ivattina hava chennāgide",
+    kn: "Ivattina havamana chennāgide",
     category: "Common conversation",
   },
   {

@@ -227,9 +227,14 @@ button {
 
 .term-text-main {
   font-weight: 500;
+    flex: 1;
+  min-width: 0;
 }
 
 .term-text-sub {
   font-size: 13px;
   color: #6b7280;
+    text-align: right;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
